@@ -13,11 +13,11 @@
 
 | | |
 |---|---|
-| **Name** | Pravin Mishra |
-| **LinkedIn** | [pravin-mishra-aws-trainer](https://www.linkedin.com/in/pravin-mishra-aws-trainer/) |
-| **Location** | Helsinki, Finland |
-| **Background** | Cloud, DevOps & AI Consultant |
-| **Goal** | Train 10,000+ DevOps professionals |
+| **Name** | Minaxi Punjabi |
+| **LinkedIn** | [Minaxi Punjabi](https://www.linkedin.com/in/minaxi-punjabi/) |
+| **Location** | Washington DC, USA |
+| **Background** | Senior Program & Product Leader, AI Decision Systems & Enterprise Transformation |
+| **Goal** | Helping enterprises become AI-operational, decision-ready, and capable of deploying AI with trust at scale.|
 
 ---
 
