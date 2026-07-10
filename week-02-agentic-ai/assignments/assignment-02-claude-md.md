@@ -72,7 +72,7 @@ Each task must be completed sequentially.
 What is this project and how should I deploy it?
 ```
 
-**Expected Output:** Claude gives a generic answer. It can see HTML and CSS but has no idea about S3, CloudFront, or Terraform.
+**Expected Output:** Claude gives a generic answer based only on the existing project files. It may describe the project as a static HTML/CSS website and suggest common deployment options.
 
 **Screenshots Required:**
 - Screenshot 1 — Claude’s generic response before CLAUDE.md exists (project contains only `index.html`, `style.css`, `images/`, `README.MD`, `privacy.html`, `terms.html`)
@@ -132,7 +132,7 @@ What is this project and how should I deploy it?
 
 **Steps:**
 1. Start a **new Claude Code session** — close the current terminal and open a fresh one
-2. Ask: `"What is this project and how should I deploy it?"` — Claude should now mention S3, CloudFront, and Terraform
+2. Ask: `"What is this project and how should I deploy it?"` — Claude should now mention S3, CloudFront, and Terraform clearly.
 3. Then ask: `"Add a React component to the homepage"` — Claude should push back because of the No JavaScript rule
 4. Screenshot both responses
 
@@ -207,7 +207,8 @@ Your submission must include:
 
 ## 10. Solution Walkthrough
 
-A step-by-step solution and troubleshooting guide is available for reference.
+A step-by-step solution and troubleshooting guide is available for reference:
+Full solution walkthrough → [Click here](../Solutions_walkthrough/assignment-02-claude-md.md)
 
 ---
 
