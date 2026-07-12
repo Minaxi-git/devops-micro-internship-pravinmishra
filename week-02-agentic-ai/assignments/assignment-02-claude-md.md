@@ -76,7 +76,7 @@ What is this project and how should I deploy it?
 
 **Screenshots Required:**
 - Screenshot 1 — Claude’s generic response before CLAUDE.md exists (project contains only `index.html`, `style.css`, `images/`, `README.MD`, `privacy.html`, `terms.html`)
-
+![Assignment 2.1 What is This Project](..\screenshots\WhatIsThisProject.png")
 ---
 
 ### Task 2 — Generate an initial CLAUDE.md using /init and review the auto-generated content in VS Code.
@@ -97,7 +97,7 @@ What is this project and how should I deploy it?
 
 **Screenshots Required:**
 - Screenshot 2 — The auto-generated CLAUDE.md open in VS Code showing its content
-
+![Assignment 02.2 Generate Claude.MD](..\screenshots\GenerateClaudeDotMD.png)
 ---
 
 ### Task 3 — Customize the CLAUDE.md
@@ -123,7 +123,7 @@ What is this project and how should I deploy it?
 
 **Screenshots Required:**
 - Screenshot 3 — Your customized CLAUDE.md in VS Code showing all 5 sections (scroll to show the full file)
-
+![Assignment 2.3 Customize Claude.MD](..\screenshots\CustomizeClaudeDotMD.png")
 ---
 
 ### Task 4 — Test the After State
@@ -148,8 +148,9 @@ Add a React component to the homepage.
 
 **Screenshots Required:**
 - Screenshot 4 — Claude's specific, detailed answer after reading CLAUDE.md (Claude mentioning S3, CloudFront and Terraform)
+![Assignment 2.4 What is this project and How should I Deploy it](..\screenshots\WhatisthisprojectandHowshouldIDeployit.png)
 - Screenshot 5 — Claude refusing or warning against adding React because of the "No JavaScript" convention defined in CLAUDE.md
-
+![Assignment 2.5 Add a React Component](..\screenshots\AddaReactComponent.png)
 ---
 
 ### Task 5 — Commit and push your changes to your fork in GitHub

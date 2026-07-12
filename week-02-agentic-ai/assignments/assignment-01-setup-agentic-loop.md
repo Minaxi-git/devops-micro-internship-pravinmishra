@@ -79,7 +79,8 @@ claude
 **Expected Output:** Version number printed. Browser opens for Anthropic login. After logging in, the Claude Code prompt appears in your terminal.
 
 **Screenshots Required:**
-- Screenshot 1 — Terminal showing `claude --version` with the version number visible
+- Screenshot 1 — Terminal showing `claude --version` with the version number visible 
+
 - Screenshot 2 — Claude Code authenticated and showing the terminal prompt 
 
 ---
@@ -93,7 +94,7 @@ claude
 2. Click **Fork → Create Fork**
 3. Clone your fork to your local machine
 4. Open the project in VS Code
-
+https://github.com/Minaxi-git/Ultimate-Agentic-DevOps-with-Claude-Code.git
 **Commands:**
 ```bash
 git clone https://github.com/YOUR_USERNAME/REPO_NAME.git
@@ -130,10 +131,11 @@ How many lines of CSS does this project have?
 - Question 2: Claude runs a command like `wc -l style.css` and reports the exact number
 
 **Screenshots Required:**
-- Screenshot 4 — Claude's response to the first question, showing it read the files (tool calls visible)
+- Screenshot 4 — Claude's response to the first question, showing it read the files (tool calls visible) 
+
 - Screenshot 5 — Claude's response to the second question, showing it ran a command and reported the line count
 
----
+--- 
 
 ## 8. Industry Insight
 
@@ -148,7 +150,7 @@ Complete all tasks in sequence.
 Your submission must include:
 - All 5 required screenshots
 - Your GitHub forked repository URL
-
+https://github.com/Minaxi-git/Ultimate-Agentic-DevOps-with-Claude-Code.git
 ---
 
 ## 10. Solution Walkthrough

@@ -100,7 +100,9 @@ mkdir -p .claude/skills/deploy
 
 **Screenshots Required:**
 - Screenshot 2 — `.claude/skills/scaffold-terraform/` open in VS Code showing both `SKILL.md` and `template-spec.md`
+![.claude/skills/scaffold-terraform/` open in VS Code showing both `SKILL.md` and `template-spec.md](..\screenshots\BothTemplateSpecandSkillInScaffoldTerraformFolder.png)
 - Screenshot 3 — `tf-plan/SKILL.md` frontmatter showing `allowed-tools: Bash, Read, Grep` (no Write) and `disable-model-invocation: true`
+![tf-plan/SKILL.md` frontmatter showing `allowed-tools: Bash, Read, Grep` (no Write) and `disable-model-invocation: true](..\screenshots\FrontMattershowingAllowedToolsinTFPlanSkill.png)
 ---
 
 ### Task 3 — Run /scaffold-terraform
@@ -121,8 +123,6 @@ mkdir -p .claude/skills/deploy
 **Expected Output:** Claude creates `main.tf`, `variables.tf`, `outputs.tf`, `providers.tf`, `backend.tf` inside a `terraform/` folder. Claude shows a summary checklist of what was created.
 
 **Screenshots Required:**
-- Screenshot 4 — Claude's response showing the scaffold complete with the file list
-- Screenshot 5 — VS Code sidebar showing the `terraform/` folder with all generated files inside
 
 ---
 
@@ -168,7 +168,7 @@ Complete all tasks in sequence.
 Your submission must include:
 - All 6 required screenshots
 - Your GitHub repo URL (skills committed and visible)
-
+https://github.com/Minaxi-git/Ultimate-Agentic-DevOps-with-Claude-Code.git
 ---
 
 ## 10. Solution Walkthrough
@@ -187,6 +187,8 @@ Create a LinkedIn post including:
 
 **Submit:**
 - LinkedIn post URL
+
+
 - Screenshot of the post
 
 ---
