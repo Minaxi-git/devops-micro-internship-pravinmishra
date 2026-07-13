@@ -20,7 +20,7 @@ Discover exactly where Claude Code stores memory for this project.
 
 #### Screenshot 1 — Memory file path shown by Claude
 
-Add your screenshot here.
+![Memory file path shown by Claude](..\screenshots\Memoryfilepath.png)
 
 ---
 
@@ -34,13 +34,13 @@ Teach Claude three specific facts about the project and instruct it to save them
 
 #### Screenshot 2 — Claude confirming the memory was saved
 
-Add your screenshot here.
+![Claude confirming the memory was saved](..\screenshots\MEMORYdotMD.png)
 
 ---
 
 #### Screenshot 3 — The `MEMORY.md` file open in VS Code showing the saved content
 
-Add your screenshot here.
+![MEMORY.MD in VS Code](..\screenshots\MEMORYdotMDinVScode.png)
 
 ---
 
@@ -54,7 +54,7 @@ Terminate the current Claude Code session and restart it to ensure memory is the
 
 #### Screenshot 4 — VS Code reopened with a fresh Claude Code session showing no previous conversation
 
-Add your screenshot here.
+![ VS Code reopened with a fresh Claude Code session showing no previous conversation](..\screenshots\NewSessionClaudeforMEMOTY.png)
 
 ---
 
@@ -68,13 +68,13 @@ Run three tests that prove Claude remembers what you told it — without you say
 
 #### Screenshot 5 — Claude recalling hero section colors
 
-Add your screenshot here.
+![Hero Section Memory](..\screenshots\MEMORYofHeroSection.png)
 
 ---
 
 #### Screenshot 6 — Claude refusing JavaScript request based on memory rule
 
-Add your screenshot here.
+![Claude refusing JavaScript request based on memory rule](..\screenshots\ShouldIaddJavaScript.png)
 
 ---
 
@@ -91,7 +91,9 @@ Add your screenshot here.
 
 Paste your Linkedin post link here:
 
-`__________________________`
+`https://lnkd.in/p/eW4Hxt_6`
+
+![LinkedIn Post Regarding MEMORY.md](..\screenshots\memorylinkedinpost.png)
 
 ---
 
@@ -99,7 +101,7 @@ Paste your Linkedin post link here:
 
 Paste your forked repository URL here:
 
-`__________________________`
+`https://github.com/Minaxi-git/Ultimate-Agentic-DevOps-with-Claude-Code.git`
 
 ---
 
