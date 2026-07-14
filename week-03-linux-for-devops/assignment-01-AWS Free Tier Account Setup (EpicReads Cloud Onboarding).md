@@ -26,13 +26,13 @@ Write your answer here.
 
 #### Question 2 — What is AWS Free Tier, and how long does it last?
 
-Write your answer here.
+Depending on the trial offer it can be  a month, 6 months or longer. The constraint is time + Credits available for various services. If one goes above the free usage limit then there will be no more availability of additional service irrespective of time left on the trial period. 
 
 ---
 
 #### Question 3 — Name three AWS Free Tier services and their free usage limits.
 
-Write your answer here.
+Amazon EC2, Amazon S3, AWS Lambda
 
 ---
 
@@ -56,7 +56,7 @@ Confirm that your AWS account setup is complete by navigating to the Account sec
 
 #### Screenshot 1 — AWS Account page showing account name (email may be blurred)
 
-Add your screenshot here.
+![ AWS Account page](..\screenshots\FreeAwsNew.png)
 
 ---
 
