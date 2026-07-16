@@ -20,7 +20,7 @@ Install Node.js and npm on the Ubuntu VM and verify the installation.
 
 #### Screenshot 1 — Output of `node -v && npm -v` showing installed versions
 
-![node -v && npm -v](..\screenshots\nodeandandnpmversion.png)
+![node -v && npm -v](screenshots/nodeandnpm.png)
 
 ---
 
@@ -32,7 +32,7 @@ Install Node.js and npm on the Ubuntu VM and verify the installation.
 
 #### Screenshot 2 — Output of `systemctl status nginx --no-pager` showing Active (running)
 
-Add your screenshot here.
+![systemctl status nginx --no-pager](screenshots/systemctl-status-nginx--no-pager.png)
 
 ---
 
