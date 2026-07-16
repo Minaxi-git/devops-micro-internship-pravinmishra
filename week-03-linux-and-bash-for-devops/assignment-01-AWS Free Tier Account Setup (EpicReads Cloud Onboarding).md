@@ -32,7 +32,18 @@ Depending on the trial offer it can be  a month, 6 months or longer. The constra
 
 #### Question 3 — Name three AWS Free Tier services and their free usage limits.
 
-Amazon EC2, Amazon S3, AWS Lambda
+Amazon S3 The Free Tier offers 5 GB of standard storage, along with 20,000
+GET requests and 2,000 PUT requests per month, as long as usage stays within these limits.
+I
+Amazon EC2 is a virtual server service that lets users run applications on cloud-hosted
+machines instead of physical hardware. The Free Tier provides 750 hours per month of a
+t2.micro or t3.micro instance - enough to run one small server continuously for a full month,
+ideal for learning, testing, and hosting basic applications.
+
+Amazon DynamoDB is a fully managed NoSQL database service used to store and query data
+at scale. Its Free Tier is "Always Free" and never expires, offering 25 GB of storage plus 25
+provisioned read and write capacity units per month, enough to handle roughly 200 million
+requests monthly.
 
 ---
 
