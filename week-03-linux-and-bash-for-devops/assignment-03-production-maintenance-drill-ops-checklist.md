@@ -20,25 +20,25 @@ Verify that the deployed React application is reachable from the browser and con
 
 #### Screenshot 1 — Browser showing the React app with your Full Name visible on the UI
 
-Add your screenshot here.
+![React app with Full Name visible on the UI](screenshots/TestDeploymenthttp.png)
 
 ---
 
 #### Screenshot 2 — Output of `ip a`
 
-Add your screenshot here.
+![Output ip a](screenshots/ipa.png)
 
 ---
 
 #### Screenshot 3 — Output of `sudo ss -tulpen`
 
-Add your screenshot here.
+![sudo ss -tulpen](screenshots/sudo-ss-tulpen.png)
 
 ---
 
 #### Screenshot 4 — Output of `sudo ufw status`
 
-Add your screenshot here.
+![sudo ufw status](screenshots/sudo-ufw-status.png)
 
 ---
 
@@ -48,19 +48,20 @@ Answer the following in your own words:
 
 **1. What proves Nginx is listening on 0.0.0.0:80?**
 
-Write your answer here.
+Image reference: Output of `sudo ss -tulpen`, The line line tcp LISTEN 0.0.0.0:80 confirms it is listening there. 0.0.0.0  is bound to all network interfaces, not just localhost, so it can accept HTTP connections from any IP address, including external traffic from the internet. The process name nginx alongside the port confirms it's specifically Nginx holding this port open, not another service
 
 ---
 
 **2. What proves SSH is active on port 22?**
 
-Write your answer here.
+Image reference: Output of `sudo ss -tulpen`The line line tcp LISTEN 0.0.0.0:22 sshd, confirms the SSH daemon (sshd) is actively listening on port 22 across all interfaces. This is what allows remote login to the server (e.g., via ssh ubuntu@<public-ip>).
+
 
 ---
 
 **3. Did you find any unexpected open ports? Explain briefly.**
 
-Write your answer here.
+No unexpected ports were found. Aside from Nginx (port 80) and SSH (port 22), the only other listening services were chronyd (time sync) and systemd-resolved (DNS resolution), both bound only to loopback addresses (127.0.0.1, 127.0.0.53, 127.0.0.54), meaning they're not reachable from outside the server. This confirms only the two intended services, the web server and SSH, are externally exposed.
 
 ---
 
@@ -74,19 +75,19 @@ Verify that Nginx is properly installed, running, enabled at boot, and safely co
 
 #### Screenshot 1 — Output of `systemctl status nginx --no-pager`
 
-Add your screenshot here.
+![systemctl status nginx --no-pager](screenshots/systemctl-status-nginx---no-pager.png)
 
 ---
 
 #### Screenshot 2 — Output of `sudo nginx -t`
 
-Add your screenshot here.
+![sudo nginx -t](screenshots/sudonginx-t.png)
 
 ---
 
 #### Screenshot 3 — Output of `sudo ss -lptn '( sport = :80 )'`
 
-Add your screenshot here.
+![Output of `sudo ss -lptn '( sport = :80 )](screenshots/sudoss-lptnsport80.png)
 
 ---
 
@@ -96,13 +97,16 @@ Answer the following in your own words:
 
 **1. What happens if Nginx fails to restart in production?**
 
-Write your answer here.
+ If Nginx fails to restart, the website becomes completely unreachable, since Nginx is the only process serving HTTP traffic on port 80. Any user visiting the site would get a connection error or timeout, since nothing would be listening on that port anymore. This is especially risky if the failure happens during a deployment or config change, since it means the site could go down with no automatic recovery, requiring manual intervention to diagnose and fix
 
 ---
 
 **2. What's your basic rollback plan?**
 
-Write your answer here.
+ Always run sudo nginx -t first to validate the config syntax — before making any configuration change.
+ This catches most errors before they ever reach a restart. If a restart is attempted and fails, the first step is to check systemctl status nginx --no-pager and sudo journalctl -u nginx --no-pager -n 50 to see the exact error.
+ If the failure is due to a bad configuration change, the fix is to revert the config file back to its last known-good version (ideally from a backup or version control) and re-run sudo nginx -t followed by sudo systemctl restart nginx again. Keeping a backup copy of the working config before making changes is the simplest safeguard, since it allows an immediate rollback without needing to debug under pressure.
+
 
 ---
 
@@ -116,19 +120,19 @@ Verify real traffic flow and analyze logs to understand system behavior and erro
 
 #### Screenshot 1 — Output of `sudo tail -n 30 /var/log/nginx/access.log`
 
-Add your screenshot here.
-
+![Output of `sudo tail -n 30 /var/log/nginx/access.log`](screenshots/ssudotailAcesslog-n30.png)
 ---
 
 #### Screenshot 2 — Output of `sudo tail -n 30 /var/log/nginx/error.log`
 
-Add your screenshot here.
+![Output of `/var/log/nginx/error.log`](screenshots/ssudotailErrorlog-n30.png)
+
 
 ---
 
 #### Screenshot 3 — Output of `sudo journalctl -u nginx --no-pager -n 50`
 
-Add your screenshot here.
+![Output of `/var/log/nginx/error.log`](screenshots/sudojournalctl.png)
 
 ---
 
@@ -147,13 +151,12 @@ Write your answer here.
 
 **2. If there were no errors, what does that indicate about the system?**
 
-Write your answer here.
-
+The command returned empty output or did not produce an explicit log error message. When /var/log/nginx/error.log is completely empty or shows no message, it generally indicates that Nginx itself is running cleanly, has no syntax errors, and is not running into low-level runtime crashes or missing static file faults, e.g. Config file issues.
 ---
 
 **3. Based on the access logs, were your curl requests visible in the log entries? What does that prove about traffic flow?**
 
-Write your answer here.
+Specifically, the logs capture your initial GET request and the subsequent HEAD request (-I) targeting the /dev/null path:"GET /dev/null HTTP/1.1" 200 644 "-" "curl/8.18.0""HEAD /dev/null HTTP/1.1" 200 0 "-" "curl/8.18.0"What this proves about the traffic flowSuccessful external connectivity: The traffic successfully navigates through all external infrastructure layers (such as cloud firewalls, security groups, and routing tables) to reach the target instance.Nginx is listening and active: The web server is actively listening on port 80 and processing incoming external connections normally.SPA fallback routing configuration: Both requests returned an HTTP 200 OK status code, but the GET request delivered exactly 644 bytes of data (the exact size of the React HTML template shell you received earlier). This confirms that Nginx's configuration is using a catch-all fallback rule (like try_files). Because /dev/null does not exist as a physical file or distinct API route inside Nginx, the server handles the request by serving the root React application template instead of throwing a 404 error.
 
 ---
 
@@ -167,25 +170,25 @@ Assess server capacity and detect potential performance or failure risks.
 
 #### Screenshot 1 — Output of `uptime`
 
-Add your screenshot here.
+![Output of `uptime`](screenshots/uptime.png)
 
 ---
 
 #### Screenshot 2 — Output of `free -h`
 
-Add your screenshot here.
+![Output of `free -h`](screenshots/free-h.png)
 
 ---
 
 #### Screenshot 3 — Output of `df -h`
 
-Add your screenshot here.
+![Output of `df -h`](screenshots/df-h.png)
 
 ---
 
 #### Screenshot 4 — Output of `sudo du -sh /var/* | sort -h`
 
-Add your screenshot here.
+![Output of `sudo du -sh /var/* | sort -h`](screenshots/sudodu.png)
 
 ---
 
@@ -195,13 +198,13 @@ Answer the following in your own words:
 
 **1. Which resource looks most critical right now? (CPU/load, memory, or disk) Explain why.**
 
-Write your answer here.
+ None of the three resources show any critical signal at this moment — CPU is idle, memory has healthy available headroom with zero swap pressure, and disk is at a comfortable 64%. If forced to rank which one deserves the closest ongoing attention as this server scales, it would be disk, since it's the resource most likely to silently creep upward over time (via log growth or package cache accumulation) without any obvious symptom until it's suddenly critical — unlike CPU or memory pressure, which usually show visible slowness firs
 
 ---
 
 **2. What happens if disk becomes 100% full in a production server?**
 
-Write your answer here.
+Logs stop being able to write new entries, which is especially dangerous because that's often exactly when you need logs most — during an active incident. Applications (including build tools and package managers) can fail or crash if they need scratch space to write temporary files. If a database were running locally, it could refuse writes or become corrupted. In severe cases, the OS itself can become unstable — even basic operations like logging in via SSH can fail if there's truly no disk space left for the system to work wit
 
 ---
 
@@ -215,19 +218,19 @@ Ensure the correct React build is deployed and Nginx is serving it properly.
 
 #### Screenshot 1 — Output of `ls -lah /var/www/html | head -n 20`
 
-Add your screenshot here.
+![Output of `ls -lah /var/www/html](screenshots/ls-lah.png)
 
 ---
 
 #### Screenshot 2 — Output of `grep -R "Deployed by" -n /var/www/html 2>/dev/null | head`
 
-Add your screenshot here.
+![Output of `grep -R "Deployed by" -n /var/www/html 2>/dev/null | head'](screenshots/grepDeployed-by.png)
 
 ---
 
 #### Screenshot 3 — Output of `grep -n "try_files" /etc/nginx/sites-available/default`
 
-Add your screenshot here.
+![Output of `grep -n "try_files" /etc/nginx/sites-available/default'](screenshots/greptry_files.png)
 
 ---
 
