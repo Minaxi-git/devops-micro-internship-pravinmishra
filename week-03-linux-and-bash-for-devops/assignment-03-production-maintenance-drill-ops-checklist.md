@@ -264,13 +264,13 @@ Simulate a real-world Nginx misconfiguration and recover the service safely.
 
 #### Screenshot 2 — Output of `sudo nginx -t` showing syntax ok (fixed config)
 
-![Output of `sudo nginx -t`](screenshots/sudonginx-tsemicolonmissingfixed.png)
+![Output of `sudo nginx -t`showing (broken config)](screenshots/sudonginx-tsemicolonmissingfixed.png)
 
 ---
 
 #### Screenshot 3 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-![Output of `sudo nginx -t`](screenshots/sudonginx-tsemicolonmissingfixed.png)
+![Output of `sudo nginx -t` showing (fixed config)](screenshots/sudonginx-tsemicolonmissingfixed.png)
 
 ---
 
@@ -280,19 +280,24 @@ Answer the following in your own words:
 
 **1. What caused the configuration failure?**
 
-Write your answer here.
+What caused the configuration failure?
+A missing semicolon; in /etc/nginx/sites-available/default was intentionally removed from the "try_files $uri /index.html;"
 
 ---
 
 **2. How did you fix the issue?**
 
-Write your answer here.
+sudo nano /etc/nginx/sites-available/default - openned the editor and I added the semicolon I had deleted intentionaly earlier. 
 
 ---
 
 **3. How can you avoid this kind of issue in real production systems?**
 
-Write your answer here.
+Always run nginx -t after any config edit, without exception, before restarting or reloading.
+Keep Nginx config files in version control (git), so a bad change can be instantly reverted to a known-good state instead of manually retyped from memory.
+Use a staging environment to test config changes before they ever touch production.
+Where possible, automate config validation as part of a deployment pipeline, so a broken config is caught in CI and never reaches the live server at all.
+
 
 ---
 
@@ -306,13 +311,13 @@ Simulate missing deployment content and recover the application safely.
 
 #### Screenshot 1 — Output of `curl -I http://<public-ip>` showing failure (non-200 response)
 
-Add your screenshot here.
+![Output of `curl -I http://<public-ip>` showing failure](screenshots/curlnon200response.png)
 
 ---
 
 #### Screenshot 2 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-Add your screenshot here.
+![Output of `curl -I http://<public-ip>` confirming recovery (200 OK)](screenshots/200-OKresponse.png)
 
 ---
 
@@ -322,19 +327,24 @@ Answer the following in your own words:
 
 **1. What caused the application to break in this scenario?**
 
-Write your answer here
+The web root directory (/var/www/html) — the exact path Nginx serves content from — was emptied of all deployment files. Nginx itself remained running and correctly configured, but with no content present and no fallback file available either, it returned a 500 Internal Server Error instead of serving the React application.
+
 
 ---
 
 **2. How did you fix the issue and restore the application?**
 
-Write your answer here.
+The original deployment had been safely backed up beforehand (moved to html_backup rather than deleted), so recovery involved removing the empty broken directory and moving the backup back into place at the correct path. Nginx was restarted to ensure it was serving cleanly from the restored files, and recovery was confirmed externally via curl -I, which returned 200 OK with identical content metadata (Content-Length, Last-Modified, ETag) to the pre-incident state — proving the exact same build was successfully restored.
 
 ---
 
 **3. What steps would you take to prevent this kind of issue in real production systems?**
 
-Write your answer here.
+- Automated pre-deployment backups, so every release can be instantly rolled back without manual intervention.
+- Deploying to a versioned, separate directory and atomically switching a symlink (e.g., /var/www/current) to point to it, rather than overwriting the live directory in place — this way a failed deploy never leaves the live path empty or half-written.
+- CI/CD pipeline checks that verify a deployment actually succeeded (e.g., confirming index.html exists and is non-empty) before marking the release complete.
+- Post-deployment health checks/monitoring that automatically verify the live site returns a healthy 200 response immediately after every deploy, catching this kind of failure within seconds rather than relying on someone noticing manually.
+
 
 ---
 
@@ -350,31 +360,31 @@ Answer the following in your own words:
 
 **1. Why is SSH key-based authentication more secure than sharing passwords?**
 
-Write your answer here.
+SSH keys are more secure because they use a private key that stays on the device instead of a password that can be phished or stolen. This makes it much harder for hackers to guess or steal.
 
 ---
 
 **2. Why should only required ports be open on a production server?**
 
-Write your answer here.
+Only the required ports should be open on a production server because every open port is a possible way for attackers to access the server. Closing unused ports reduces security risks and helps protect the server from unauthorized access and attacks.
 
 ---
 
 **3. Why is it important for Nginx to be enabled on boot?**
 
-Write your answer here.
+It's important for Nginx to be enabled on boot so the web server starts automatically whenever the server restarts. This keeps your website or application available without requiring someone to start Nginx manually.
 
 ---
 
 **4. What are the risks of sharing secrets, keys, or credentials publicly?**
 
-Write your answer here.
+Sharing secrets, keys, or credentials publicly can let unauthorized people access your systems, data, or accounts. This can lead to data theft, service disruption, unauthorized changes, or financial loss. It can lead to loosing data of users which can lead to legal complications and penalties and fines too.
 
 ---
 
 **5. Why should cloud resources be stopped or terminated when they are no longer needed?**
 
-Write your answer here.
+Cloud resources should be stopped or terminated when they are no longer needed to save money, reduce security risks, and avoid wasting computing resources
 
 ---
 
@@ -386,13 +396,13 @@ Write your answer here.
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/minaxi-punjabi_agenticai-systemsthinking-softwaredelivery-share-7485228098930606080-mByv/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABqPfm0BltUSV7lY0aKhl1BWZCRBhv3K4iQ
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+![Post](screenshots/week03linkedinassignment3.png)
 
 ---
 
