@@ -20,7 +20,7 @@ Verify the Ubuntu VM and Nginx are ready for deployment.
 
 #### Screenshot 0 — Output of `sudo systemctl status nginx --no-pager` showing Active (running)
 
-Add your screenshot here.
+![Output of `sudo systemctl status nginx --no-pager`](screenshots/systemctlstatus.png)
 
 ---
 
@@ -34,7 +34,7 @@ Download and extract the portfolio website template.
 
 #### Screenshot 1 — Output of `ls -la` showing the extracted project folder
 
-Add your screenshot here.
+![Output of `ls -la` showing the extracted project folder](screenshots/extractedProjectFolder.png)
 
 ---
 
@@ -48,8 +48,8 @@ Update the website footer with your deployment details.
 
 #### Screenshot 2 — Nano editor open with the updated footer showing your Full Name, Group, Week, and Date
 
-Add your screenshot here.
-
+![Output of cat index.html | grep -A 3 "Crafted with"](screenshots/UpdatedFooter.png)
+![Nano editor open with the updated footer showing your Full Name, Group, Week, and Date](screenshots/NanoEditorUpdatedFooter.png)
 ---
 
 # Task 3 — Deploy Website via Nginx
@@ -62,13 +62,12 @@ Deploy the portfolio website to the Nginx web root.
 
 #### Screenshot 3 — Output of `sudo nginx -t` showing configuration test successful
 
-Add your screenshot here.
-
+![sudo nginx -t` showing configuration test successful](screenshots/nginx-t.png)
 ---
 
 #### Screenshot 4 — Output of `ls /var/www/html` showing deployed website files
 
-Add your screenshot here.
+![Output of `ls /var/www/html`](screenshots/lslivedeploy.png)
 
 ---
 
@@ -82,13 +81,13 @@ Verify the deployed website is publicly accessible and the footer contains your 
 
 #### Screenshot 5 — Output of `curl ifconfig.me` showing the server's public IP address
 
-Add your screenshot here.
+![Output of `curl ifconfig.me`](screenschots/curliconfig.png)
 
 ---
 
 #### Screenshot 6 — Browser showing the live website with your Full Name and deployment details in the footer
 
-Add your screenshot here.
+![Browser showing the live website with your Full Name and deployment details in the footer](screenshots/DeployednewfooterwithNameDate.png)
 
 ---
 
@@ -102,13 +101,13 @@ Verify the deployed website and Nginx service are healthy.
 
 #### Screenshot 7 — Output of `systemctl is-enabled nginx`
 
-Add your screenshot here.
+![Output of `systemctl is-enabled nginx`](screenshots/enablednginx.png)
 
 ---
 
 #### Screenshot 8 — Output of `curl -I http://localhost` showing 200 OK
 
-Add your screenshot here.
+![Output of 'curl -I http://localhost`](screenshots/localhost.png)
 
 ---
 
@@ -120,13 +119,13 @@ Add your screenshot here.
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+[`https://www.linkedin.com/posts/minaxi-punjabi_dmibypravinmishra-aileadership-enterpriseai-share-7486728014987403264-qjVy/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABqPfm0BltUSV7lY0aKhl1BWZCRBhv3K4iQ`](https://www.linkedin.com/posts/minaxi-punjabi_dmibypravinmishra-aileadership-enterpriseai-share-7486728014987403264-qjVy/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABqPfm0BltUSV7lY0aKhl1BWZCRBhv3K4iQ)
 
 ---
 
 #### Screenshot — Published LinkedIn post showing the live website with your Full Name in the footer
 
-Add your screenshot here.
+![Published LinkedIn post](screenshots/linkedin%20deploy%20image.png)
 
 ---
 
