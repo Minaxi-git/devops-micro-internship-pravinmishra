@@ -230,9 +230,7 @@ The for loop goes through the array and displays each tool one by one:
 do
    		 echo "Tool available for practice: $tool"
 done
-During each loop iteration, the current item is stored in the tool variable. The for loop goes through each value in the tools array one by one. During each round, the current value is stored in the tool variable and printed in the terminal.
-For example, during the first round, $tool contains bash. During the next round, it contains nano, and the loop continues until every tool has been printed.
-
+During each loop iteration, the current item is stored in the tool variable. 
 
 
 ---
@@ -247,13 +245,13 @@ Use loops to repeat a task multiple times.
 
 #### Screenshot 1 — Content of `counter.sh`
 
-Add your screenshot here.
+![counter.sh contents](screenshots/countingloop.png)
 
 ---
 
 #### Screenshot 2 — Output of `./counter.sh`
 
-Add your screenshot here.
+![counter.sh output after changing permissions](screenshots/outputcountingloop.png)
 
 ---
 
@@ -263,25 +261,38 @@ Answer the following in your own words:
 
 **1. What is a loop?**
 
-Add your answer here.
+A loop is a programming control structure that repeatedly executes a specific block of code as long as a certain condition remains true or until all items in a target collection have been processed. 
 
 ---
 
 **2. Why do we use loops in Bash scripting?**
 
-Add your answer here.
+Instead of writing out the same instructions over and over again, a loop automates the repetition. It also checks for teh conditions met or unmet to continue repeatign teh tasks in loop and when to appropriately take the path of 'done'.
 
 ---
 
 **3. How many times did the loop run in your script?**
 
-Add your answer here.
-
+It ran 5 times displaying 
+        Step 1 completed
+        Step 2 completed
+        Step 3 completed
+        Step 4 completed
+        Step 5 completed
+        Loop completed successfully
 ---
 
 **4. What would you change if you wanted the loop to run 10 times?**
 
-Add your answer here.
+One would update the list of values to 1 through 10 for the array name 'number' as shown below. As well as since 10 is now a two digit number for the list to be shown as space representeing teh separation of values added quotes around the array inteh echo command.
+
+    for number in 1 2 3 4 5 6 7 8 9 10
+    do
+        echo "Step "$number" completed"
+    done
+
+    echo "Loop completed successfully"
+
 
 ---
 
@@ -295,19 +306,19 @@ Use file checks and conditionals to verify whether files and directories exist.
 
 #### Screenshot 1 — Output of `ls -lah ../test-folder`
 
-Add your screenshot here.
+![`ls -lah ../test-folder`](screenshots/ls-student-info-txt.png)
 
 ---
 
 #### Screenshot 2 — Content of `file-check.sh`
 
-Add your screenshot here.
+![Content of `file-check.sh`](screenshots/contentFile-check.png)
 
 ---
 
 #### Screenshot 3 — Output of `./file-check.sh`
 
-Add your screenshot here.
+![Output of `./file-check.sh`](screenshots/OutputtFile-check.png)
 
 ---
 
@@ -317,25 +328,24 @@ Answer the following in your own words:
 
 **1. What does `-d` check in Bash?**
 
-Add your answer here.
-
+In Bash, the -d operator tests whether a specific path exists and is a directory.When wrapped inside an if statement brackets ([ ... ]), it evaluates to true if the path points to a valid folder, and false if the path does not exist or points to a regular file (like a text document).
 ---
 
 **2. What does `-f` check in Bash?**
 
-Add your answer here.
+-f: Checks if the path is a regular file (rather than a folder). In the If condition If a check is successful, the commands under then will run. Otherwise, the commands under else will run. Each conditional ends with fi.
 
 ---
 
 **3. Why should file and directory paths be stored in variables?**
 
-Add your answer here.
-
+Storing paths in variables makes the script easier to read and update. If a path changes, we only need to update the variable instead of changing the same path in several places.
 ---
 
 **4. What happens if the file does not exist?**
 
-Add your answer here.
+If the file does not exist, the -f check becomes false. Therefore, the commands under else will run, and the following message will be displayed:
+File does not exist: ../test-folder/student-info.txt
 
 ---
 
@@ -349,13 +359,13 @@ Use if-else conditionals to make decisions based on a variable value.
 
 #### Screenshot 1 — Content of `score-check.sh` with `score=85`
 
-Add your screenshot here.
+![Content of score-check.sh](screenshots/contentscorecheck.png)
 
 ---
 
 #### Screenshot 2 — Output showing `Result: Pass`
 
-Add your screenshot here.
+![Output showing 85 Score as Pass ](screenshots/85ScorePass.png)
 
 ---
 
@@ -367,7 +377,7 @@ Add your screenshot here.
 
 #### Screenshot 4 — Output showing `Result: Retry`
 
-Add your screenshot here.
+![Output showing `Result: Retry`](screenshots/retryscore55.png)
 
 ---
 
@@ -377,25 +387,28 @@ Answer the following in your own words:
 
 **1. What is the purpose of if-else in Bash?**
 
-Add your answer here.
+The if-else statement provides decision-making logic in a script. It allows the script to evaluate a condition (such as checking if a file exists or if a command succeeded) and branch execution. If the condition evaluates to true, the script runs one block of code; if it evaluates to false, it runs an alternate block of code instead of just failing or stopping
 
 ---
 
 **2. What does `-ge` mean?**
 
-Add your answer here.
+The -ge flag is a comparison operator that stands for greater than or equal to (>=). It is specifically used inside brackets [ ] or [[ ]] to compare integer values. For example, [ "$age" -ge 18 ] evaluates to true if the variable $age is 18 or any number higher.
 
 ---
 
 **3. Why should conditions be tested with different values?**
 
-Add your answer here.
+esting conditions with different values—especially boundary and unexpected values—ensures your logic holds up under real-world scenarios. It helps you catch bugs where a script might work for a typical input but completely break or behave unpredictably when given zero, a negative number, a blank string, or an extremely large value
 
 ---
 
 **4. How can conditionals help in automation scripts?**
 
-Add your answer here.
+Conditionals make automation scripts resilient and self-aware. Instead of blindly executing commands that might fail, conditionals allow a script to:
+- Pre-verify environments: Check if necessary software tools or dependency packages are installed before starting an installation.
+- Handle errors gracefully: Detect if a backup command failed, and immediately trigger a notification email instead of silently ignoring the issue.
+- Enforce safety limits: Verify if a hard drive has enough free disk space (-ge) before attempting to download a massive dataset.
 
 ---
 
@@ -409,20 +422,19 @@ Create a final Bash script using functions to organize reusable code.
 
 #### Screenshot 1 — Content of `final-automation.sh`
 
-Add your screenshot here.
+![Content of `final-automation.sh`](screenshots/content-final-automation.png)
 
 ---
 
 #### Screenshot 2 — Output of `./final-automation.sh`
 
-Add your screenshot here.
+![Output of `./final-automation.sh`](screenshots/output-final-automation.png)
 
 ---
 
 #### Screenshot 3 — Output of `ls -lah` showing all created scripts
 
-Add your screenshot here.
-
+![Output of `ls -lah` showing all created scripts](screenshots/confirm-bash-scripts-in-folder-are-present.png)
 ---
 
 ### Notes
@@ -431,25 +443,36 @@ Answer the following in your own words:
 
 **1. What is a function in Bash?**
 
-Add your answer here.
+A function is a reusable block of code designed to perform a specific task within a script. It acts like a mini-script inside your main script, grouped under a unique name. Once a function is defined, it can be executed (or "called") anywhere later in the script simply by typing its name.
 
 ---
 
 **2. Why are functions useful in scripts?**
 
-Add your answer here.
+Code Reusability: Instead of copying and pasting the exact same 10 lines of code five different times throughout a script, you write it once inside a function and call it whenever needed.Modularity and Readability: They break complex scripts down into small, digestible, and isolated logical chunks, making the script significantly easier to read, organize, and debug.Local Variable Scoping: They allow you to use the local keyword to isolate variables inside the block, preventing functions from accidentally modifying or breaking variables in the main body of the script.
 
 ---
 
 **3. Which functions did you create in this script?**
 
-Add your answer here.
+- print_header(): Generates a consistent, formatted visual banner at the top of the terminal output displaying the assignment name.
+- print_user_details(): Outputs the specific metadata of the script author, including your full name and the assignment title.
+- check_files(): Evaluates the system environment by checking if the targeted directory (../test-folder) and file (../test-folder/student-info.txt) exist.
+- print_tools(): Iterates through the predefined list of software utilities to print a checklist of tools used in the lesson.
 
 ---
 
 **4. How does this final script combine variables, arrays, loops, conditionals, files, and functions?**
 
-Add your answer here.
+
+
+Six elements are combined into a structured workflow:
+- Funtions: - Four individual blocks (print_header, print_user_details, check_files, and print_tools) isolate distinct tasks. The script defines them first, then runs them sequentially at the bottom, which keeps the main execution path highly organized and clean.
+- Variables: Global string variables (full_name, assignment_name, directory_path, and file_path) are defined at the very top of the script. 
+- Arrays: The tools array holds a list of six utility strings ("bash", "nano", etc.) in a list.
+- Loops: Inside the print_tools() function, a for loop safely unpacks the array using "${tools[@]}", iterating through each tool one by one to print them uniformly.
+- Conditionals: The check_files() function employs if statements paired with fi evaluates the paths using the -d (directory check) and -f (file check) flags to branch output based on whether the targets exist.
+- Files: The check-file function isolates a clean error handling if certain files and directories are not present using the IF-FI block and passing the paths and filenames through variables (../test-folder/student-info.txt) preparing the script to interact with external storage paths.Functions: 
 
 ---
 
@@ -461,13 +484,13 @@ Add your answer here.
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/minaxi-punjabi_dmibypravinmishra-agenticai-aileadership-share-7487258983163088896--LUI/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABqPfm0BltUSV7lY0aKhl1BWZCRBhv3K4iQ
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+![Published LinkedIn post Git Bash Script](screenshots/LinkedinGitBash.png)
 
 ---
 
