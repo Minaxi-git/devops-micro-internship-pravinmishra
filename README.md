@@ -57,7 +57,7 @@ This is not a course. It is an internship-style program — real deployments, re
 
 *Earn a badge each week. To unlock: remove the `<!--` and `-->` from the badge line below.*
 
-*Share your stack:* `https://github.com/YOUR-USERNAME/devops-micro-internship-pravinmishra#my-devops-stack`
+*Share your stack:* `https://github.com/Minaxi=git/devops-micro-internship-pravinmishra#my-devops-stack`
 
 **Preview — what your full stack looks like:**
 
@@ -130,10 +130,10 @@ This is not a course. It is an internship-style program — real deployments, re
 
 | Week | Topic | Status | Assignment | LinkedIn Post | Blog Post |
 |------|-------|--------|------------|---------------|-----------|
-| 00 | Internet & Networking Basics | ✅ Co Completed | ✅ Solved 
-| 01 | Success Mindset | ✅ Co Completed | ✅ Solved 
-| 02 | Agentic AI with Claude Code | ✅ Co Completed | ✅ Solved 
-| 03 | Linux for DevOps | &nbsp; 🔄 In Progress &nbsp | ⏳ Pending | — | — |
+| 00 | Internet & Networking Basics | ✅ Completed<br | ✅ Solved 
+| 01 | Success Mindset | ✅ Completed<br | ✅ Solved 
+| 02 | Agentic AI with Claude Code | ✅ Completed<br | ✅ Solvedd 
+| 03 | Linux for DevOps | &nbsp; ✅ Completed<br | ✅ Solved | — | — |
 | 04 | Bash Scripting | ⬜ Not Started | ⏳ Pending | — | — |
 | 05 | Git & GitHub | ⬜ Not Started | ⏳ Pending | — | — |
 | 06 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
