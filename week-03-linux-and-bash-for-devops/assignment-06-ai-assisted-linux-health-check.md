@@ -520,13 +520,13 @@ to confirm the live web server was successfully answering network traffic.
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+[`Add your URL here`](https://lnkd.in/p/eAMtu6tg)
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+![Screenshot — Published LinkedIn post](screenshots/linkedinwk03assignment06.png)
 
 ---
 
@@ -534,7 +534,7 @@ Add your screenshot here.
 
 Paste the URL of your GitHub folder or repository containing the assignment files here:
 
-`Add your URL here`
+[`Add your Git Hub URL here`](https://github.com/Minaxi-git/devops-micro-internship-pravinmishra/tree/main/week-03-linux-and-bash-for-devops)
 
 ---
 
