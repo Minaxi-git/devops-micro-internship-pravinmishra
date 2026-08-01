@@ -20,13 +20,13 @@ Create a `CodeTrack` project folder and initialize it as a Git repository.
 
 #### Screenshot 1 — Output of `git init` inside `CodeTrack` showing "Initialized empty Git repository"
 
-Add your screenshot here.
+![Create the CodeTrack Project and Initialize Git](screenshots/CreateandInitializeGitCodeTrackProject%20.png)
 
 ---
 
 #### Screenshot 2 — Output of `ls -a` showing the `.git` folder
 
-Add your screenshot here.
+![`ls -a` showing the `.git` folder](screenshots/CreateandInitializeGitCodeTrackProject.png )
 
 ---
 
@@ -34,7 +34,12 @@ Add your screenshot here.
 
 **1. What is the `.git` folder, and why does it matter?**
 
-Add your answer here.
+The .git folder is the hidden core of any Git repository, serving as its tracking engine and database. It matters because it stores the entire version history, configuration settings, and metadata for your project.Why the .git Folder Matters
+
+- Tracks all changes: It records every modification, addition, and deletion made to your files.
+- Enables version control: It allows you to revert to previous project states, switch branches, and merge code.
+- Acts as a local database: It contains all commits, branches, and tags, meaning you can work fully offline.
+- Saves project identity: It stores remote repository URLs and user configurations for pushing and pulling code.
 
 ---
 
@@ -48,7 +53,9 @@ Set your Git username and email for the `CodeTrack` repository only, using `git 
 
 #### Screenshot 3 — Output of `git config --local --list` showing your `user.name` and `user.email`
 
-Add your screenshot here.
+![Output of `git config --local --list` showing your `user.name` and `user.email`](screenshots/LocalListGit.png)
+
+![How I setup attach future git commits locally ](screenshots/ConfigureGitIdentityLocally.png)
 
 ---
 
@@ -62,7 +69,7 @@ Set a global Git username and email for this machine using `git config --global`
 
 #### Screenshot 4 — Output of `git config --global --list` showing your `user.name` and `user.email`
 
-Add your screenshot here.
+![ `git config --global --list`](screenshots/ConfigureGitIdentityGlobally.png)
 
 ---
 
