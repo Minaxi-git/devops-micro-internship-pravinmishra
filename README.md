@@ -134,7 +134,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 01 | Success Mindset | ✅ Completed<br | ✅ Solved 
 | 02 | Agentic AI with Claude Code | ✅ Completed<br | ✅ Solvedd 
 | 03 | Linux for DevOps | &nbsp; ✅ Completed<br | ✅ Solved | — | — |
-| 04 | Bash Scripting | ⬜ Not Started | ⏳ Pending | — | — |
+| 04 | Bash Scripting | 🔄 In Progress | ⏳ Pending | — | — |
 | 05 | Git & GitHub | ⬜ Not Started | ⏳ Pending | — | — |
 | 06 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
 | 07 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
