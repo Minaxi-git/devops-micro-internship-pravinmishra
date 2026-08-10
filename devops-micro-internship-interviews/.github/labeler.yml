@@ -1,0 +1,48 @@
+week-00:
+  - changed-files:
+      - any-glob-to-any-file: '00-networking/**'
+week-01:
+  - changed-files:
+      - any-glob-to-any-file: '01-linux/**'
+week-02:
+  - changed-files:
+      - any-glob-to-any-file: '02-git-github/**'
+week-03:
+  - changed-files:
+      - any-glob-to-any-file: '03-devops-lifecycle/**'
+week-04:
+  - changed-files:
+      - any-glob-to-any-file: '04-aws/**'
+week-05:
+  - changed-files:
+      - any-glob-to-any-file: '05-azure/**'
+week-06:
+  - changed-files:
+      - any-glob-to-any-file: '06-terraform/**'
+week-07:
+  - changed-files:
+      - any-glob-to-any-file: '07-ansible/**'
+week-08:
+  - changed-files:
+      - any-glob-to-any-file: '08-cicd/**'
+week-09:
+  - changed-files:
+      - any-glob-to-any-file: '09-docker/**'
+week-10:
+  - changed-files:
+      - any-glob-to-any-file: '10-kubernetes/**'
+week-11:
+  - changed-files:
+      - any-glob-to-any-file: '11-observability/**'
+week-12:
+  - changed-files:
+      - any-glob-to-any-file: '12-eks/**'
+week-13:
+  - changed-files:
+      - any-glob-to-any-file: '13-helm/**'
+week-14:
+  - changed-files:
+      - any-glob-to-any-file: '14-argocd-gitops/**'
+week-15:
+  - changed-files:
+      - any-glob-to-any-file: '15-karpenter/**'
