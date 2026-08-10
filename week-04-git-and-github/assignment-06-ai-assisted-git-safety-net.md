@@ -27,7 +27,7 @@ Confirm you are working in your own fork, then create a dedicated branch for thi
 
 #### Screenshot 1 — Output of git remote -v and git branch showing the new branch
 
-Add your screenshot here.
+![git remote -v and git branch showing the new branch](screenshots/ConfirmForkInterviewsUpstream.png)
 
 ---
 
@@ -35,7 +35,11 @@ Add your screenshot here.
 
 **1. Why create a dedicated branch instead of doing this work on main?**
 
-Add your answer here.
+Creating a dedicated branch instead of working directly on main is one of the most critical best practices in modern DevOps and software engineering. It is a concept known as Feature Branch Workflow.Here is exactly why production environments never allow direct commits to main:
+1. It Protects the Production EnvironmentThe main branch represents the stable, working version of your software (or in your case, your official assignment portfolio). Working on a dedicated branch ensures that if you write a buggy script or accidentally break a configuration file, your stable version remains unharmed.
+2. It Enables the Code Review Process (Pull Requests)In a professional setting, you never merge your own code directly into production.You do your work on a feature branch.You push that branch to GitHub and open a Pull Request (PR).Senior engineers or automated tests review your code to catch bugs before it gets merged into main.
+3. It Allows You to Multi-Task on Different IssuesImagine you are halfway through a complex script on main, and suddenly your instructor tells you to fix a critical error in an earlier assignment. If you are on main, your broken script is stuck in your way.With branches: You simply switch off your unfinished feature branch, jump back to main, fix the quick bug, push it, and switch right back to your feature branch without losing any work.
+4. It Keeps Git History Clean and ReadableWhen teams work together, working on separate branches allows Git to organize commits cleanly. Instead of a messy, tangled timeline of half-finished thoughts on main, the history shows clean blocks of features being added one complete piece at a time.
 
 ---
 
@@ -49,7 +53,7 @@ On your own fork of this repository (the one you've been submitting your DMI wor
 
 #### Screenshot 1 — Output of  `git status` showing the staged file on feature/ai-pr-ready
 
-Add your screenshot here.
+![git status` showing the staged file on feature/ai-pr-ready](screenshots/showing-the-staged-file-on-feature-ai-pr-ready.png)
 
 ---
 
@@ -57,7 +61,10 @@ Add your screenshot here.
 
 **1. Why does this assignment use an obviously fake key instead of a real one?**
 
-Add your answer here.
+This assignment explicitly uses an obviously fake AWS key (AKIAABCDEFGHIJKLMNOP) for one critical DevOps safety reason: it prevents your cloud infrastructure from being instantly compromised, exploited, and hit with massive unexpected bills.Here is exactly what happens behind the scenes if you push a real credential to a public Git repository like GitHub:
+1. The GitHub "Leaked Secret" RadarGitHub runs automated scanners that continuously watch every line of code pushed to public repositories.If you push a real key: Within seconds, GitHub's security algorithms will spot the valid AWS pattern, alert Amazon Web Services, and temporarily lock down your AWS account or key to protect you.If you push a fake key: The automated scanner recognizes it is an invalid placeholder string, allows your file upload to proceed cleanly, and triggers no security alerts.
+2. Malicious Script Crawlers (Bots)Hackers deploy automated scrapers that comb through public GitHub commits every second, explicitly searching for terms like AWS_ACCESS_KEY_ID.If a bot finds a real key, it will instantly log into your AWS console.Within minutes, they will spin up dozens of high-powered, expensive cloud servers to mine cryptocurrency or launch cyberattacks.This can stick the fre tier users with thousands of dollars in charges in less than an hour.
+3. Debug Logs Are Permanently PublicYour script includes the line: echo "DEBUG: token is $AWS_ACCESS_KEY_ID".If this script ever runs inside an automated system (like GitHub Actions), that token will be printed out in plain text inside the execution logs for anyone to see. In a professional DevOps pipeline, you must never print or hardcode secret variables into your scripts.
 
 ---
 
@@ -71,13 +78,13 @@ Create a tracked, shareable pre-commit hook that blocks a commit containing secr
 
 #### Screenshot 2 — `hooks/pre-commit` open in VS Code showing the full script
 
-Add your screenshot here.
+![hooks/pre-commit](screenshots/hooks-pre-commit.png)
 
 ---
 
 #### Screenshot 3 — Output of `git config core.hooksPath` confirming it points to `hooks`
 
-Add your screenshot here.
+!['git config core.hooksPath`](screenshots/HooksGitConfig.png)
 
 ---
 
@@ -85,13 +92,29 @@ Add your screenshot here.
 
 **1. Why is `hooks/pre-commit` tracked in the repo instead of living only in `.git/hooks/`?**
 
-Add your answer here.
+Tracking hooks/pre-commit in your visible project directory instead of leaving it hidden inside .git/hooks/ is a standard practice in professional DevOps for two critical reasons: team-wide sharing and version history control.
+1. Hidden .git/ Folders Are Never UploadedThe default .git/ directory on your computer is your private local workspace database.
+    - The Problem: When you run git push, Git deliberately ignores the contents of the hidden .git/ folder. It never uploads your private configurations, custom aliases, or local hooks to GitHub.
+    - The Result: If you write a brilliant safety script and leave it inside .git/hooks/, none of your fellow engineers or grading mentors will ever see it. When they clone your repo, their local hooks folder will be completely empty, and they will lack your safety guardrails.
+2. It Automates Team-Wide Security GuardrailsBy moving the hook script out into a regular tracked folder (hooks/pre-commit), it turns the script into standard project source code.
+    - Collaboration: When a teammate clones your repository, the hooks/ directory downloads onto their machine automatically.
+    - Easy Activation: All they have to do to activate the exact same security guardrails on their own computer is run a single setup script or type:git config core.hooksPath hooks.
+This ensures that every developer on the project is automatically held to the exact same security standards (like blocking leaked secrets or blocking massive files over 1MB) before code leaves their laptop.
+3. It Provides Version Tracking HistoryIf you edit or upgrade your safety hook script directly inside the hidden .git/hooks/ folder, Git cannot track your changes.
 
+    By tracking it in your visible repository structure instead:
+    - You can see exactly who modified the hook script using git log.
+    - You can roll back to an older version of the hook script if a new update accidentally breaks someone's pipeline.
+    - You can write clear commit messages explaining why a new regex expression was added to look for secret keys.
 ---
 
 **2. Compare this to `PreToolUse` from Week 2 Assignment 6. What does each one intercept, and what do they have in common?**
 
-Add your answer here.
+Both have the same architectural security principle in action: intercepting an action to validate safety rules before allowing it to proceed.
+
+The Week # 2 Hook:  It intercepts autonomous execution by scanning the AI’s generated command payload for dangerous patterns or destructive keywords (like terraform destroy or rm -rf) before the script hits your operating system shell.
+
+The Week #6 Hook:  It intercepts human oversight by scanning your staged files for leaked access keys (AKIA...), unencrypted private keys, or bulky files larger than 1MB before they are written to your Git database.
 
 ---
 
