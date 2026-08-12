@@ -128,7 +128,7 @@ Attempt to commit the staged file from Task 1 and show the hook rejecting it.
 
 #### Screenshot 4 — Terminal showing `git commit` rejected with the hook's "BLOCKED" message naming the exact file
 
-Add your screenshot here.
+![`git commit` rejected with the hook's "BLOCKED" message naming the exact file](screenshots/rejected-with-the-hook's%20-BLOCKED.pngejected-with-the-hook's -BLOCKED.png)
 
 ---
 
@@ -136,13 +136,14 @@ Add your screenshot here.
 
 **1. Which line in `hooks/pre-commit` matched your fake key, and why did it match?**
 
-Add your answer here.
+The third line (AWS_ACCESS_KEY_ID=AKIAABCDEFGHIJKLMNOP) matched pre-commit script.
+Why It Matched: The script uses a tool called grep to look for specific patterns.The Pattern: It looks for the text AKIA followed by exactly 16 letters or numbers.The Match: Our fake key starts with AKIA and has exactly 16 uppercase letters after it (ABCDEFGHIJKLMNOP).Because your line perfectly fits that pattern, the script flagged it as a possible secret.
 
 ---
 
 **2. Could this hook have caught a poorly-named variable that stores a secret without the `AKIA` prefix? What does that tell you about the limits of a fixed rule like this?**
 
-Add your answer here.
+The script looks for exact text patterns. It only flags strings starting with AKIA or the pattern after the | matches the header line of a private key file (RSA, OpenSSH, or generic PRIVATE KEY) or if the file size is over 1MB. It cannot read context. It does not understand variable names like SECRET_PASSWORD="my-password".The Limits of Fixed RulesThis tells us two major things about fixed rules (also called regex or patterns):They miss hidden dangers (False Negatives): A hacker can easily steal a secret if it does not match the exact pattern.They require constant updates: You must manually add a new rule for every new type of key, token, or password you want to protect.
 
 ---
 
@@ -156,13 +157,13 @@ Create a manually invoked Claude Code skill that reads your staged changes and p
 
 #### Screenshot 5 — `SKILL.md` frontmatter showing `allowed-tools: Bash, Read, Grep` (no `Write`) and `disable-model-invocation: true`
 
-Add your screenshot here.
+![`SKILL.md` frontmatter showing `allowed-tools: Bash, Read, Grep` (no `Write`) and `disable-model-invocation: true`](screenshots/stageCheckSKILL.png)
 
 ---
 
 #### Screenshot 6 — `/pr-ready` output while the risky file is still staged, showing it flagged the secret and/or debug statement
 
-Add your screenshot here.
+![`/pr-ready` output while the risky file is still staged, showing it flagged the secret and/or debug statement](screenshots/SKILLAbortStaging.png)
 
 ---
 
@@ -170,13 +171,33 @@ Add your screenshot here.
 
 **1. Why does `/pr-ready` have `Bash` and `Read` but not `Write`?**
 
-Add your answer here.
+Write is not in the allowed-tools list for this skill because of two important reasons:
 
+ 1. Safety and SecurityThe prompt explicitly says: "Never edit files."By leaving Write off the list, you create a physical barrier. Even if Claude makes a mistake or misunderstands an instruction, it physically does not have the tool required to change, overwrite, or delete your code.
+
+ 2. The Principle of Least PrivilegeThis is a core rule in computer security. It means you should only give a program the exact tools it needs to do its job, and nothing more. Because this skill is designed to only review code and print a report on your screen, it has no functional need to write to your hard drive.
+
+Why Bash is allowed:
+
+- The prompt asks Claude to run git diff --cached and git status.Claude cannot talk to Git directly. It must use the terminal command line to get that information. The Bash tool gives Claude the power to run those specific Git terminal commands.
+
+Why Read is allowed:
+
+- The prompt asks Claude to look for secrets, TODOs, and debug prints inside your files.While git diff shows the changes, Claude often needs to look at the whole file to understand the context of your code. The Read tool allows Claude to open and view the files in your project without changing them.
 ---
 
 **2. The pre-commit hook and `/pr-ready` both looked at the same staged diff. Did they flag the same things? What did one catch that the other didn't?**
 
-Add your answer here.
+No, they did not flag the exact same things. While both tools spotted the fake AWS key, they handled the file completely differently.Here is exactly what each tool caught and what they missed:
+What Both Tools CaughtThe Fake AWS Key: 
+- Both the script and the SKILL successfully flagged the line containing AWS_ACCESS_KEY_ID=AKIA....
+What the SKILL Caught (That the Script Missed): 
+-The Claude SKILL caught two major issues that the bash script completely ignored:The Debug Print Line: The SKILL flagged echo "DEBUG: token is..." as leftover trash code that needs removal. The script ignored it.
+The Empty Change: The SKILL noticed that your actual git modification was just an accidental blank line at the bottom of the file. The script didn't care.
+
+The Context: The SKILL read the comment and understood the key was just a "fake credential for this assignment." 
+
+**What the Script Did** (That the SKILL Didn't)A Hard Block: The script actually stopped the commit from happening in your terminal.The SKILL **only provided a text report** on your screen. It did not physically block you from doing anything because it has no writing or executing powers.
 
 ---
 
@@ -196,7 +217,7 @@ Add your screenshot here.
 
 #### Screenshot 8 — Second `/pr-ready` run showing a clean risk report and a drafted PR title + description
 
-Add your screenshot here.
+![Second `/pr-ready` run showing a clean risk report and a drafted PR title + description](screenshots/noBlockStaging.png)
 
 ---
 
