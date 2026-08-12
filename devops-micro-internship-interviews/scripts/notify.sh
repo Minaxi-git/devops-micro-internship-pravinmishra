@@ -1,3 +1,3 @@
 #!/bin/bash
 # demo only — testing commit flag again
-echo "New Notify no Fake Keys"
+echo "Fork to Minaxi - New Notify no Fake Keys and no blocks"
