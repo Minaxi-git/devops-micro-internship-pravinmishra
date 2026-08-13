@@ -20,7 +20,7 @@ Create or access your Jira Cloud account and reach the Jira Software workspace s
 
 #### Screenshot 1 — Jira welcome page, dashboard, or main workspace after successful login, with your name or avatar visible
 
-Add your screenshot here.
+![Jira welcome page, dashboard, or main workspace after successful login, with your name or avatar visible](screenshots/jira-AI_PM_Account.png)
 
 ---
 
@@ -34,7 +34,7 @@ Confirm your email address if Atlassian requests verification.
 
 #### Screenshot 2 (if applicable) — Confirmation screen after email verification, or the inbox showing the Atlassian verification email subject
 
-Add your screenshot here.
+ I signed up using Google, and Atlassian did not require separate email verification.
 
 ---
 
@@ -44,8 +44,8 @@ If you signed up with Google and no separate email verification was required, in
 
 > I signed up using Google, and Atlassian did not require separate email verification.
 
-Add any additional notes here.
-
+I use this "aipmcohort8projects@gmail.com" gmail for my atlassian and aws acccount to get free credits since i have used my other main email in the past.
+here is the link https://minaxipunjabi.atlassian.net?continue=https%3A%2F%2Fminaxipunjabi.atlassian.net%2Fwelcome%2Fsoftware&atlOrigin=eyJpIjoiMTgzYjE2ZDI2ODdiNDg3Mjg3YTE2NjNlYzExZGU2NGQiLCJwIjoiaiJ9
 ---
 
 # Task 3 — Set Up Your Professional Jira Profile
@@ -58,7 +58,7 @@ Update your Jira profile with your full name, a job title or role (e.g. "Aspirin
 
 #### Screenshot 3 — Updated profile page showing your full name, role/title, and bio
 
-Add your screenshot here.
+![Jira: Updated profile page showing your full name, role/title, and bio](screenshots/jiraBio.png)
 
 ---
 
@@ -72,13 +72,12 @@ Locate the project list and open a project's Board or Backlog, and view Project 
 
 #### Screenshot 4 — "View all projects" page showing at least one project
 
-Add your screenshot here.
-
+![View all projects page showing at least one project](screenshots/alljiraprojects.png)
 ---
 
 #### Screenshot 5 — Opened project showing either the Board or Backlog screen
 
-Add your screenshot here.
+![Opened project showing either the Board or Backlog screen](screenshots/JiraProject.png)
 
 ---
 
