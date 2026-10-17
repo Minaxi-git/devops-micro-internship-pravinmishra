@@ -1,6 +1,6 @@
 # Week 01 — Success Mindset (Mindset OS)
 
-Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
+Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 ---
 
@@ -25,10 +25,7 @@ If I say this and remind myself that there will be no better time than now this 
 
 ## Answer
 
-1. A Rule of Life I believe in is; there is luck - we cannot control where we are born, what country, what place, what family, what economic and genetic hereditary traits we inherit and even more so what beliefs we aquire along the way in life which to a large degree dictate our future, through our mindset that was formed over the years by experiences and concsious and unconcsious reward systems and belief systems.
-2. I believe I have been fortunate that my belief and mindset has made me adaptive and flexible. Also it has given me an ability to be in gratitude and service. It has given me the ability to be excited with small surprises and acheivements and made me action oriented when i am dissatisfied. I am grateful that my mindset is driven towards producing benefit for me as individual and for communities I am part of and our planet in line with cosmic rules and that is my good luck to have received all these ingredients and they have contributed to my success so far in life and the reason all teh good thinhgs that have happenned to me. 
-3. I don't know much about how and why I was always showing up and ready to participate in what seemed like good and whollistic and value adding and yet I would not see it completely through during my formal education years. My weakness is I need collborators, mentors and cohorts, for my sucess. Those were not as accessible then but they are now and I want to hold on to this gift for my dear life to help me lern what i have been waiting to learn. Also in the past I needed a reason other than my success but luckily that has now been replaced with a will to survive and survive doign well for myself and my son. And that is not being selfish cause if each and all of us do well the community at large is better for it as long as our success is not being built as a consequence of destruction without giving them the access to get out of the way to also succed in time well before th edestruction occurs- in other words yes death and life are a cycle. Old and new e.g. technological disruption is also a cycle however if we are going to disrupt and be better off we have a responsibility to help secure the ones and things we are disrupting so they may continue to thrive. 
-4. Lastly I beleive in conciousness ... plants, animals all things living and who know maybe even what we consider non-living is concious. My dream is someday living beings will allow their true love filled nature and abilities to shine and wont be stuck in levels of fear to find basic food, wealth, shelter,and live in the fight-flight-fawn-freeze survival mode as we have for the history of human kind.
+Add your answer here...
 
 ---
 
@@ -56,11 +53,10 @@ Write each truth in this format:
 
 Complaining to others regularly breaks trust within ourselves over our inner agency on ones own life. Yes there are things beyond my control recognise those and then atleast work to correct or improve what "is" within my reach. E.g.g I cannot pick up rubbish from all the streets, I can start with not throwing my rubbish on the streets. Future maybe my community and I can improve our street and be agents of change by sharign our learnings and distributing knowledge tools encouragement etc. with others. 
 
----
+--
 
 ## Truth #2
 
-### Truth
 
 2) Somethings are bigger than me and I cannot solve everything, at that time trust in the power of divine, spirit, god, universe something with the positive belief that thngs will get better and be good and are already getting better.
 
@@ -115,16 +111,33 @@ Write as if a journalist is writing about you **3 to 7 years from now** (not 20 
   * community contribution
 * Add 1–3 images if you can (optional but powerful).
 
-### Publish It Publicly On Any ONE
+### Public Article URL
 
-* LinkedIn
-* Medium
-* WordPress
-* Blogspot
-* Personal blog
-* Portfolio page
+```text
+Paste your published article URL here...
+```
 
-Include this line:
+### LinkedIn Post URL
+
+Create a LinkedIn post sharing your published article, then add the URL below.
+
+```text
+Paste your LinkedIn post URL here...
+```
+
+### Credit Note — DMI Self-Paced Engineer Track Students
+
+Add this credit note at the end of your public article. Replace `YOUR-GITHUB-USERNAME` with your actual GitHub username.
+
+> **P.S. This post is part of the DevOps Micro Internship (DMI) — Self-Paced Engineer Track — by [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/). My graded progress is public:** https://dmi.pravinmishra.com/s/YOUR-GITHUB-USERNAME.html **· Start your DevOps journey:** https://dmi.pravinmishra.com/?utm_source=student&utm_medium=ps-blog&utm_campaign=self-paced
+
+`#DMIByPravinMishra`
+
+Tag [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/) in your LinkedIn post.
+
+### Credit Note — DMI Campus Students
+
+Add this credit note at the end of your public article. Replace `YOUR-GITHUB-USERNAME` with your actual GitHub username.
 
 > **P.S. This post is part of the DevOps Micro Internship (DMI) with Agentic AI — Cohort 3 — by [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/). My graded progress is public: https://dmi.pravinmishra.com/s/YOUR-GITHUB-USERNAME.html · Start your DevOps journey: https://dmi.pravinmishra.com/?utm_source=student&utm_medium=ps-blog&utm_campaign=cohort3**
 
@@ -240,11 +253,9 @@ On careers and narrative
 
 ---
 
-# Assignment 6. What are the things you will measure regularly in your life and career?
+## Task 6 — Your Life and Career Metrics
 
-### Rules
-
-List topics only. No need to share numbers.
+List the things you will measure regularly in your life and career. You only need to list the metric topics; do not include personal numbers.
 
 ### Must Include
 
@@ -328,7 +339,7 @@ Example:
 
 Times will be night time after dinner. Days are a little unpredicatbale to balance with teh schedule and load at work and other personal family responsibilites and duty.
 
-#### How Many Sessions Per Week?
+#### How Many DMI Work Sessions Will I Complete Each Week?
 
 5 including the class days
 
@@ -348,17 +359,17 @@ Turn off , mute notifications
 
 ---
 
-# Reflection – Week 1
+## Task 8 — Week 1 Reflection and Proof of Work
 
-### Biggest insight I got about myself this week
+### Biggest Insight I Got About Myself This Week
 
 I want to do many things 
 
-### My biggest weakness/loop I noticed
+### My Biggest Weakness or Loop I Noticed
 
 I sacrifice sleep and exercise
 
-### One system I will implement from this week (exact habit + time)
+### One System I Will Implement From This Week (Exact Habit and Time)
 
 Yoga at 7:30 PM
 
@@ -372,8 +383,8 @@ Paste your LinkedIn post link here:
 
 ## 10. Proof of Work
 
-- LinkedIn Post URL: **(https://www.linkedin.com/posts/minaxi-punjabi_sign-up-for-a-class-to-gain-deeper-technical-activity-7478707855282434049-7hc7?utm_source=share&utm_medium=member_desktop&rcm=ACoAABqPfm0BltUSV7lY0aKhl1BWZCRBhv3K4iQ)**  
-- Blog / Medium : **[(https://medium.com/@minaxi.punjabi/the-program-manager-who-learned-to-build-what-she-used-to-govern-05766c4d9693?sharedUserId=minaxi.punjabi)]**  
+- LinkedIn Post URL: **ADD LINK HERE**  
+- Blog / Medium : **ADD LINK HERE**  
 
 ---
 
@@ -397,9 +408,3 @@ It helps learners build strong DevOps foundations with hands-on experience.
 ---
 
 *This submission is part of DevOps Micro Internship (DMI) Cohort 3 — Agentic AI Track*
-
- ** Week 00 → Internet & Networking Basics **
-[![Week 00 – Networking](./badges/week-00.svg)](./week-00-internet-and-networking/)
-
- ** Week 01 → Success Mindset **
- [![Week 01 – Mindset](./badges/week-01.svg)](./week-01-success-mindset/)
