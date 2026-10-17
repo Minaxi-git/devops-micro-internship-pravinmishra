@@ -131,11 +131,11 @@ This is not a course. It is an internship-style program — real deployments, re
 | Week | Topic | Status | Assignment | LinkedIn Post | Blog Post |
 |------|-------|--------|------------|---------------|-----------|
 | 00 | Internet & Networking Basics | ✅ Completed<br | ✅ Solved 
-| 01 | Success Mindset | ✅ Completed<br | ✅ Solved 
-| 02 | Agentic AI with Claude Code | ✅ Completed<br | ✅ Solvedd 
-| 03 | Linux for DevOps | ✅ Completed<br | ✅ Solved | — | — |
-| 04 | Bash Scripting | ✅ Completed<br | ✅ Solved | — | — |
-| 05 | Git & GitHub | ✅ Completed<br | ✅ Solved | — | — |
+| 01 | Success Mindset | ✅ Completed<br | ✅ Solved | https://www.linkedin.com/posts/minaxi-punjabi_sign-up-for-a-class-to-gain-deeper-technical-activity-7478707855282434049-7hc7?utm_source=share&utm_medium=member_desktop&rcm=ACoAABqPfm0BltUSV7lY0aKhl1BWZCRBhv3K4iQ | https://medium.com/@minaxi.punjabi/the-program-manager-who-learned-to-build-what-she-used-to-govern-05766c4d9693 |
+| 02 | Agentic AI with Claude Code | ✅ Completed<br | ✅ Solved | https://www.linkedin.com/posts/minaxi-punjabi_dmibypravinmishra-agenticai-claudecode-activity-7481548609918951424-HhLQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAABqPfm0BltUSV7lY0aKhl1BWZCRBhv3K4iQ | https://medium.com/@minaxi.punjabi/week-2-reflection-agentic-ai-is-shifting-devops-from-execution-to-system-design-4f1456f2c505 |
+| 03 | Linux for DevOps | ✅ Completed<br | ✅ Solved | https://lnkd.in/p/ey7-VdjP | — |
+| 04 | Bash Scripting | ✅ Completed<br | ✅ Solved | https://lnkd.in/p/eqgcs2JG | — |
+| 05 | Git & GitHub | ✅ Completed<br | ✅ Solved | https://lnkd.in/p/eQiDgQzd | — |
 | 06 | DevOps Lifecycle & Agile | &nbsp; 🔄 In Progress &nbsp;| ⏳ Pending &nbsp;| — | — |
 | 07 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 08 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |

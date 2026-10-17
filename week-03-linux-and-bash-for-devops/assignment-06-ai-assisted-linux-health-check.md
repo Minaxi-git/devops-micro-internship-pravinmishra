@@ -520,7 +520,7 @@ to confirm the live web server was successfully answering network traffic.
 
 Paste your LinkedIn post URL here:
 
-[`Add your URL here`](https://lnkd.in/p/eAMtu6tg)
+https://lnkd.in/p/eAMtu6tg
 
 ---
 
